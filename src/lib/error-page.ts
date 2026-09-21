@@ -1,9 +1,9 @@
 export function renderErrorPage(): string {
   return `<!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Cette page ne s’est pas chargée</title>
+    <title>This page could not load</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       body { font: 15px/1.5 system-ui, -apple-system, sans-serif; background: #fafafa; color: #111; display: grid; place-items: center; min-height: 100vh; margin: 0; padding: 1.5rem; }
@@ -18,11 +18,11 @@ export function renderErrorPage(): string {
   </head>
   <body>
     <div class="card">
-      <h1>Cette page ne s’est pas chargée</h1>
-      <p>Une erreur s’est produite. Vous pouvez actualiser la page ou revenir à l’accueil.</p>
+      <h1>This page could not load</h1>
+      <p>Something went wrong. You can refresh the page or return home.</p>
       <div class="actions">
-        <button class="primary" onclick="location.reload()">Réessayer</button>
-        <a class="secondary" href="/">Retour à l’accueil</a>
+        <button class="primary" onclick="location.reload()">Try again</button>
+        <a class="secondary" href="/">Back to home</a>
       </div>
     </div>
   </body>

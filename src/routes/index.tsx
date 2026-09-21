@@ -16,14 +16,14 @@ const OG_IMAGE =
   "https://getnovara.site/cdn/shop/files/ChatGPTImage28deago.de2026_15_53_54.png?v=1787943249&width=1200";
 
 const description =
-  "Shorts de performance légers, respirants et à séchage rapide avec poches zippées. Achetez 1, 2 ou 4 shorts et économisez jusqu’à 44 %.";
+  "Lightweight, breathable, quick-drying performance shorts with zippered pockets. Buy 1, 2, or 4 pairs and save up to 44%.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Short de Sport Femme 2-en-1 – Confort & Performance | Novara" },
+      { title: "Women's 2-in-1 Performance Shorts | Novara" },
       { name: "description", content: description },
-      { property: "og:title", content: "Short de Sport Femme 2-en-1 – Confort & Performance | Novara" },
+      { property: "og:title", content: "Women's 2-in-1 Performance Shorts | Novara" },
       { property: "og:description", content: description },
       { property: "og:type", content: "product" },
       { property: "og:image", content: OG_IMAGE },
@@ -51,7 +51,7 @@ function ProductPage() {
             <div className="px-4 md:px-0">
               <div className="flex items-center gap-2">
                 <StarRating rating={4.8} />
-                 <span className="text-sm text-muted-foreground">(4,8 avis)</span>
+                <span className="text-sm text-muted-foreground">(4.8 reviews)</span>
               </div>
 
               <h1 className="mt-2 text-[27px] font-semibold leading-tight text-foreground lg:text-[31px]">

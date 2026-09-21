@@ -19,12 +19,12 @@ export function DescriptionSection() {
 
       <div className="mt-10 text-center">
         <h2 id="description-heading" className="text-2xl font-bold text-foreground lg:text-3xl">
-          Bougez librement. En toute confiance.
+          Move freely. With confidence.
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground lg:text-base">
-          Conçus pour l’entraînement comme pour le quotidien, ces shorts de performance sont fabriqués
-          dans un tissu léger, respirant et à séchage rapide. La taille élastique réglable assure un
-          maintien parfait, tandis que les poches zippées gardent vos essentiels en sécurité.
+          Designed for workouts and everyday wear, these performance shorts use lightweight,
+          breathable, quick-drying fabric. The adjustable elastic waistband provides a secure fit,
+          while zippered pockets keep your essentials safe.
         </p>
       </div>
 

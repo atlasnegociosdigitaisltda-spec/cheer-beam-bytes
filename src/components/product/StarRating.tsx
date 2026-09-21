@@ -19,7 +19,7 @@ export function StarRating({ rating, className, starClassName }: StarRatingProps
     <span
       className={cn("inline-flex items-center gap-0.5", className)}
       role="img"
-      aria-label={`${safeRating} étoiles sur 5`}
+      aria-label={`${safeRating} out of 5 stars`}
     >
       {Array.from({ length: 5 }).map((_, index) => {
         const filled = index < rounded;

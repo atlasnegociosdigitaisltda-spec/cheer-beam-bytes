@@ -41,7 +41,7 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
         <Button
           type="button"
           onClick={() => step(-1)}
-          aria-label="Image précédente"
+          aria-label="Previous image"
           variant="ghost"
           size="icon"
           className="absolute left-3 top-1/2 hidden -translate-y-1/2 rounded-full bg-background/85 md:hidden"
@@ -51,7 +51,7 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
         <Button
           type="button"
           onClick={() => step(1)}
-          aria-label="Image suivante"
+          aria-label="Next image"
           variant="ghost"
           size="icon"
           className="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-full bg-background/85 md:hidden"
@@ -64,7 +64,7 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
         <Button
           type="button"
           onClick={() => scrollThumbs(-1)}
-          aria-label="Faire défiler les miniatures vers la gauche"
+          aria-label="Scroll thumbnails left"
           variant="ghost"
           size="icon"
           className="hidden h-8 w-8 shrink-0 rounded-full md:inline-flex"
@@ -81,7 +81,7 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
               key={image.src}
               type="button"
               onClick={() => setActiveIndex(index)}
-               aria-label={`Afficher l’image ${index + 1}`}
+                aria-label={`Show image ${index + 1}`}
               aria-current={index === activeIndex}
               className={cn(
                 "h-[62px] w-[62px] shrink-0 overflow-hidden rounded-md border-2 transition-colors sm:h-[62px] sm:w-[62px]",
@@ -103,7 +103,7 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
         <Button
           type="button"
           onClick={() => scrollThumbs(1)}
-          aria-label="Faire défiler les miniatures vers la droite"
+          aria-label="Scroll thumbnails right"
           variant="ghost"
           size="icon"
           className="hidden h-8 w-8 shrink-0 rounded-full md:inline-flex"

@@ -13,7 +13,7 @@ export function FaqSection() {
         id="faq-heading"
         className="mb-6 text-center text-2xl font-bold uppercase text-foreground lg:text-3xl"
       >
-        Questions fréquentes
+        Frequently Asked Questions
       </h2>
 
       <Accordion type="single" collapsible defaultValue="faq-0" className="w-full">
