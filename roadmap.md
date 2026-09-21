@@ -1,0 +1,4 @@
+- [x] Ajustar o card Buy 1 conforme o print enviado
+- [x] Converter os preços para euro e traduzir toda a página para francês
+- [x] Associer chaque variante de couleur à sa photo correspondante
+- [x] Ajustar as barras de distribuição das avaliações conforme o print
