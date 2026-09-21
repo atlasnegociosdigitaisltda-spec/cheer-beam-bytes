@@ -4,7 +4,7 @@ import { useState, type ComponentProps } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const navLinks = ["Accueil", "Catalogue", "Contact"] as const;
+const navLinks = ["Home", "Catalog", "Contact"] as const;
 const logo = "https://getnovara.site/cdn/shop/files/ChatGPT_Image_25_de_ago._de_2026_13_30_10.png?v=1787944077&width=500";
 
 export interface SiteHeaderProps extends ComponentProps<"header"> {}
@@ -16,14 +16,14 @@ export function SiteHeader({ className, ...props }: SiteHeaderProps) {
     <header className={cn("z-40", className)} {...props}>
       <div className="flex h-[59px] items-center justify-center gap-2 bg-topbar px-4 text-topbar-foreground max-md:h-11">
         <Store className="h-4 w-4" aria-hidden="true" />
-         <span className="text-sm font-semibold tracking-wide">Livraison gratuite</span>
+        <span className="text-sm font-semibold tracking-wide">Free Shipping</span>
       </div>
 
       <div className="border-b border-border bg-background">
         <div className="relative mx-auto flex h-[90px] max-w-[1180px] items-center justify-between px-4 max-md:h-[72px] lg:px-0">
           <Button
             type="button"
-             aria-label="Ouvrir le menu"
+            aria-label="Open menu"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
             variant="ghost"
@@ -33,7 +33,7 @@ export function SiteHeader({ className, ...props }: SiteHeaderProps) {
             <Menu className="h-5 w-5" aria-hidden="true" />
           </Button>
 
-           <nav aria-label="Navigation principale" className="hidden md:flex md:items-center md:gap-7">
+          <nav aria-label="Main navigation" className="hidden md:flex md:items-center md:gap-7">
             {navLinks.map((link) => (
               <a
                 key={link}
@@ -48,7 +48,7 @@ export function SiteHeader({ className, ...props }: SiteHeaderProps) {
           <a
             href="#"
             className="flex items-center gap-1.5 md:absolute md:left-1/2 md:-translate-x-1/2"
-             aria-label="Accueil Novara"
+            aria-label="Novara home"
           >
             <img src={logo} alt="Novara" width={180} height={48} className="h-auto w-[140px] object-contain" />
           </a>
@@ -56,7 +56,7 @@ export function SiteHeader({ className, ...props }: SiteHeaderProps) {
           <div className="flex items-center gap-1">
             <Button
               type="button"
-               aria-label="Rechercher"
+              aria-label="Search"
               variant="ghost"
               size="icon"
             >
@@ -64,7 +64,7 @@ export function SiteHeader({ className, ...props }: SiteHeaderProps) {
             </Button>
             <Button
               type="button"
-               aria-label="Compte"
+              aria-label="Account"
               variant="ghost"
               size="icon"
               className="hidden sm:inline-flex"
@@ -73,7 +73,7 @@ export function SiteHeader({ className, ...props }: SiteHeaderProps) {
             </Button>
             <Button
               type="button"
-               aria-label="Panier"
+              aria-label="Cart"
               variant="ghost"
               size="icon"
             >
@@ -83,7 +83,7 @@ export function SiteHeader({ className, ...props }: SiteHeaderProps) {
         </div>
 
         {menuOpen ? (
-           <nav aria-label="Navigation mobile" className="border-t border-border px-4 py-2 md:hidden">
+          <nav aria-label="Mobile navigation" className="border-t border-border px-4 py-2 md:hidden">
             {navLinks.map((link) => (
               <a
                 key={link}

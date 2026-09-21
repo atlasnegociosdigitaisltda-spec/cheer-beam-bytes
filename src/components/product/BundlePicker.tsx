@@ -20,7 +20,7 @@ interface PairSelection {
 }
 
 const makePairs = (quantity: number): PairSelection[] =>
-  Array.from({ length: quantity }, () => ({ size: "S" as Size, color: "Noir" as Color }));
+  Array.from({ length: quantity }, () => ({ size: "S" as Size, color: "Black" as Color }));
 
 function PairRow({
   index,
@@ -36,7 +36,7 @@ function PairRow({
       <span className="shrink-0 text-sm font-medium text-muted-foreground">#{index + 1}</span>
 
       <label className="sr-only" htmlFor={`size-${index}`}>
-        Taille du short {index + 1}
+        Size for pair {index + 1}
       </label>
       <select
         id={`size-${index}`}
@@ -53,7 +53,7 @@ function PairRow({
 
       <img
         src={variantImageByColor[value.color]}
-        alt={`Short coloris ${value.color}`}
+        alt={`${value.color} performance shorts`}
         width={40}
         height={40}
         loading="lazy"
@@ -61,7 +61,7 @@ function PairRow({
       />
 
       <label className="sr-only" htmlFor={`color-${index}`}>
-        Couleur du short {index + 1}
+        Color for pair {index + 1}
       </label>
       <select
         id={`color-${index}`}
@@ -185,8 +185,8 @@ export function BundlePicker() {
     const details =
       selected.quantity > 1
         ? chosen.map((pair) => `${pair.size} ${pair.color}`).join(", ")
-         : "1 short";
-    toast.success(`${selected.quantity} short${selected.quantity > 1 ? "s ajoutés" : " ajouté"}`, {
+        : "1 pair";
+    toast.success(`${selected.quantity} pair${selected.quantity > 1 ? "s" : ""} added`, {
       description: `${details} — ${formatPrice(selected.price)}`,
     });
   };
@@ -211,7 +211,7 @@ export function BundlePicker() {
         onClick={handleAddToCart}
         className="mt-5 h-auto w-full rounded-md bg-brand px-6 py-4 text-base font-semibold uppercase tracking-[0.06em] text-brand-foreground transition-colors hover:bg-brand/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
       >
-         Ajouter {selected.quantity} short{selected.quantity > 1 ? "s" : ""} — {formatPrice(selected.price)}
+        Add {selected.quantity} pair{selected.quantity > 1 ? "s" : ""} — {formatPrice(selected.price)}
       </Button>
     </div>
   );
