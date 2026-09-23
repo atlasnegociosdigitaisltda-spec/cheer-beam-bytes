@@ -77,6 +77,8 @@ export interface Bundle {
   readonly compareAt?: number;
   readonly perPair: number;
   readonly ribbon?: string;
+  /** Shopify cart permalink this offer deep-links to. */
+  readonly cartUrl: string;
 }
 
 export const bundles: readonly Bundle[] = [
@@ -87,6 +89,7 @@ export const bundles: readonly Bundle[] = [
     subtitle: "Perfect for trying them out",
     price: 39.95,
     perPair: 39.95,
+    cartUrl: "https://getnovara.site/cart/49196480790747:1",
   },
   {
     id: "buy-2",
@@ -97,6 +100,7 @@ export const bundles: readonly Bundle[] = [
     price: 59.95,
     compareAt: 79.9,
     perPair: 29.98,
+    cartUrl: "https://getnovara.site/cart/49196480823515:1",
   },
   {
     id: "buy-4",
@@ -108,6 +112,7 @@ export const bundles: readonly Bundle[] = [
     compareAt: 159.8,
     perPair: 22.49,
     ribbon: "Best value",
+    cartUrl: "https://getnovara.site/cart/49196480856283:1",
   },
 ];
 
