@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -181,14 +180,8 @@ export function BundlePicker() {
   };
 
   const handleAddToCart = () => {
-    const chosen = pairsByBundle[selected.id] ?? [];
-    const details =
-      selected.quantity > 1
-        ? chosen.map((pair) => `${pair.size} ${pair.color}`).join(", ")
-        : "1 pair";
-    toast.success(`${selected.quantity} pair${selected.quantity > 1 ? "s" : ""} added`, {
-      description: `${details} — ${formatPrice(selected.price)}`,
-    });
+    // Deep-link to the Shopify cart permalink for the selected offer.
+    window.location.href = selected.cartUrl;
   };
 
   return (
