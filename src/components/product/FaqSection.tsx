@@ -11,7 +11,7 @@ export function FaqSection() {
     <section className="mx-auto max-w-[860px] px-4 py-12 lg:py-16" aria-labelledby="faq-heading">
       <h2
         id="faq-heading"
-        className="mb-6 text-center text-2xl font-bold uppercase text-foreground lg:text-3xl"
+        className="mb-8 text-center text-2xl font-extrabold uppercase tracking-tight text-foreground lg:text-3xl"
       >
         Frequently Asked Questions
       </h2>
@@ -19,10 +19,10 @@ export function FaqSection() {
       <Accordion type="single" collapsible defaultValue="faq-0" className="w-full">
         {faqs.map((faq, index) => (
           <AccordionItem key={faq.question} value={`faq-${index}`}>
-            <AccordionTrigger className="text-left text-base font-medium">
+            <AccordionTrigger className="py-5 text-left text-[15px] font-normal hover:no-underline">
               {faq.question}
             </AccordionTrigger>
-            <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+            <AccordionContent className="pb-5 text-sm leading-relaxed text-muted-foreground">
               {faq.answer}
             </AccordionContent>
           </AccordionItem>
