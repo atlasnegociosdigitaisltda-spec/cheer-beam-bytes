@@ -30,13 +30,7 @@ export function SiteFooter() {
       </div>
       <div className="mx-auto mt-10 max-w-[1180px] border-t border-border pt-6">
         <p className="mb-3 text-xs text-muted-foreground">Payment methods</p>
-        <ul className="flex flex-wrap gap-x-4 gap-y-1">
-          {paymentMethods.map((method) => (
-            <li key={method} className="text-xs text-muted-foreground">
-              {method}
-            </li>
-          ))}
-        </ul>
+        <PaymentMethods />
 
         <p className="mt-5 text-xs text-muted-foreground">
           © {new Date().getFullYear()}, Novara
