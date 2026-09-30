@@ -1,15 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-const paymentMethods = [
-  "American Express",
-  "Apple Pay",
-  "Diners Club",
-  "Discover",
-  "Google Pay",
-  "Mastercard",
-  "PayPal",
-  "Visa",
-] as const;
+import { PaymentMethods } from "./PaymentMethods";
 
 export function SiteFooter() {
   return (
